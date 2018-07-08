@@ -1,0 +1,523 @@
+@media (min-width: 480px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.125;
+  }
+
+  .header-holder {
+    .logo {
+      img {
+        max-width: 90%;
+      }
+    }
+  }
+
+  .foto-section {
+    .hidden-img {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .hidden-block {
+        font-size: 22px;
+        line-height: 1.090909;
+        padding-top: 55px;
+      } 
+    }
+  }
+
+  .quote-section {
+    blockquote {
+      padding: 140px 70px 0;
+    }
+  }
+
+  .employees-section {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    .corey-miller,
+    .kat-von-d,
+    .newsletter
+     {
+      font-size: 14px;
+      line-height: 1.14285; 
+      max-width: 500px;
+    }
+    
+    .corey-miller,
+    .kat-von-d {
+      font-weight: 600;
+      ul {
+        li {
+          padding: 0 18px;
+          margin-bottom: 5px;
+        }
+      }    
+    }
+  }     
+}
+
+@media (min-width: 768px) {
+
+  %list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-opener {
+    display: none;
+  }
+  
+  .main-menu {
+    margin-right: 15px;
+  }
+
+  .main-menu-after {
+    margin-left: 15px;
+  }
+
+  .main-menu,
+  .main-menu-after {
+    display: inline-block;
+    vertical-align: middle;
+    
+    ul {
+      @extend %list-reset;
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 12px;
+
+        a {
+          position: relative;
+          font-size: 12px;
+          line-height: 1.166666;
+          font-family: 'Times New Romans', sans-serif;
+          color: #000;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding-bottom: 10px;
+
+          &:hover {
+            color: #6d553f;
+
+            &:before {
+              width: 100%;
+            }
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
+            background-color: #6d553f;
+            transition: .3s;
+          } 
+        }
+      }
+    }
+  }
+  
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-foto,
+  .about-text {
+    width: 50%;
+  }
+  
+  .about-foto {
+    padding-top: 250px;
+  }
+  .about-text {
+    padding: 65px 45px;
+
+    img {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .foto-section {
+    .hidden-img {   
+      img {
+        width: 250px;
+        height: 250px;
+      }
+
+      .hidden-block {
+        padding-top: 75px;
+
+        a {
+          margin-bottom: 40px;
+        }
+      } 
+    }
+  }
+
+  .quote-section {
+    blockquote {
+      padding: 145px 130px 0;
+
+      em {
+        font-size: 20px;
+        line-height: 1.1;
+      }  
+    }
+  }
+
+  .employees-section {
+    .kat-foto {
+      display: none;
+    }
+
+    .kat-hidden {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .img-holder,
+    .corey-foto,
+    .corey-miller,
+    .kat-hidden,
+    .kat-foto,
+    .kat-von-d,
+    .newsletter {
+      width: 384px;
+      height: 384px;
+    }
+
+    .corey-miller,
+    .kat-von-d {
+      ul {
+        li {
+          padding: 0 10px;
+
+          i {
+            font-size: 25px;
+            line-height: 1.08;
+          }
+        }
+      }    
+    }
+
+    .newsletter {
+      padding: 100px 55px 30px;
+    }
+  }
+
+  .twitter-section {
+    font-size: 18px;
+    line-height: 1.1111111;
+    padding: 75px 35px;
+  }
+
+  .gallery-section {
+    .gallery {
+      margin-left: -5px;
+      padding-top: 100px;
+      display: inline-block;
+      height: 300px;
+      width: 600px;
+    }
+
+    .hidden-img {
+      img {
+        height: 300px;
+        width: 300px;
+      }
+
+      .hidden-block {
+        font-size: 22px;
+        line-height: 1.090909;
+        padding-top: 95px;
+        
+        a {
+          margin-bottom: 40px;
+        }
+
+        ul {
+          li {
+            padding: 0 25px;
+          }
+        }
+      } 
+    }  
+  }
+
+  .contact-section {
+    text-align: center;
+
+    .contact-us,
+    .form {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 45%;
+    }
+
+    .contact-us {
+      margin-right: 5%;
+
+      .btn {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 0 0 15px;
+      }
+
+      .info,
+      .work-hours {
+        margin-bottom: 15px;
+
+        li {
+          &:first-child {
+            padding-bottom: 5px;
+          }
+        }
+      }
+
+      .icons {
+        margin-bottom: 0;
+
+        li {
+          padding: 0 15px;
+        }
+      }
+    }
+  
+    .form {
+      input {
+        padding: 15px;
+        margin-bottom: 35px;
+      }
+
+      textarea {
+        padding: 15px;
+        height: 170px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .menu-section {
+    .menu-holder {
+      margin-bottom:  50px;
+
+      .menu,
+      .menu-after {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+
+        ul {
+          li {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 10px;
+            margin: 0;
+          }
+        }
+      }
+
+      .logo {
+        img {
+          max-width:75%;
+        }
+      }
+    }  
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .btn {
+    font-size: 36px;
+    line-height: 1.0555555;
+    padding:15px 25px;
+  }
+
+  .main-menu,
+  .main-menu-after { 
+    ul {
+      li {
+        a {
+          font-size: 16px;
+          line-height: 1.125;
+        }
+      }
+    }
+  }
+
+  .about-text {
+    padding: 95px 85px;
+    font-size: 16px;
+    line-height: 1.125;
+
+    strong {
+      font-size: 18px;
+      line-height: 1.111111;
+    }
+  }
+
+  .quote-section {
+    blockquote {
+      padding: 150px 150px 0;
+
+      em {
+        font-size: 24px;
+        line-height: 1.08333;
+      }  
+    }
+  }
+
+  .employees-section {
+    .img-holder,
+    .corey-foto,
+    .corey-miller,
+    .kat-hidden,
+    .kat-foto,
+    .kat-von-d,
+    .newsletter
+     {
+      width: 500px;
+      height: 500px;
+    }
+    
+    .corey-miller,
+    .kat-von-d {
+      ul {
+        li {
+          padding: 0 12px;
+
+          i {
+            font-size: 36px;
+            line-height: 1.05555;
+          }
+        }
+      }    
+    }
+
+    .corey-miller,
+    .kat-von-d,
+    .newsletter {
+      padding: 150px 55px 30px;
+    }
+  }
+
+  .twitter-section {
+    font-size: 22px;
+    line-height: 1.090909;
+    padding: 100px 35px;
+
+    .twitter-holder {
+      width: 900px;
+    }
+  }
+
+  .contact-section {
+    padding: 150px 0;
+
+    .contact-us {
+      .btn {
+        margin-bottom: 50px;
+      }
+
+      p {
+        margin: 0 0 50px;
+      }
+
+      .info,
+      .work-hours {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 48%;
+        margin-bottom: 40px;
+
+        li {
+          &:first-child {
+            padding-bottom: 15px;
+          }
+        }
+      }
+
+      .icons {
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  
+    .form {
+      textarea {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .menu-section {
+    padding: 120px 20px 60px;
+
+    .menu-holder {
+      margin-bottom: 80px;
+      
+      .menu {
+        margin-right: 55px;
+      }
+
+      .menu-after {
+        margin-left: 55px;
+      }
+      
+      .menu,
+      .menu-after {
+        ul {
+          li {
+            padding: 0 15px;
+          }
+        }
+      }
+
+      .logo {
+        img {
+          max-width:100%;
+        }
+      } 
+    } 
+  }            
+}  
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1500px) {
+
+  #header {
+    background-size: 100%;
+  }
+
+  .employees-section { 
+    .kat-hidden {
+      display: none;
+    }
+    .kat-foto {
+      display: inline-block;
+      vertical-align: top;
+    }
+  } 
+}
+
