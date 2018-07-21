@@ -1,0 +1,173 @@
+#footer {
+	padding: 15px 0;
+	background-color: #000;
+	text-align: center;
+
+	@include media('>=phone') {
+		padding: 25px 0;
+	}
+
+	@include media('>=tablet') {
+		padding: 45px 0;
+	}
+}
+
+.footer-holder {
+	margin-bottom: 18px;
+
+	@include media('>=tablet') {
+		overflow: hidden;
+		margin-bottom: 28px;
+	}
+
+	ul {
+		@extend %listreset;
+
+		@include media('>=tablet') {
+			li {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.email-telephone {
+		@include media('>=tablet') {
+			float: left;
+			margin: 0 -15px;
+		}
+
+		@include media('>=desktop') {
+			margin: 0 -39px;
+		}
+
+		li {
+			margin-bottom: 8px;
+
+			@include media('>=tablet') {
+				margin-bottom: 0;
+				padding: 0 15px;
+			}
+
+			@include media('>=desktop') {
+				padding: 0 39px;
+			}
+
+			a {
+				@include animate(color);
+
+				font-size: 16px;
+				line-height: 1.125;
+				font-weight: 600;
+				color: #f9fafb;
+
+				&:hover {
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	.icon-menu {
+		margin: 0 -11px;
+
+		@include media('>=tablet') {
+			float: right;
+		}
+
+		li {
+			padding: 8px 11px 0;
+			display: inline-block;
+			vertical-align: top;
+
+			a {
+				display: block;
+				font-size: 14px;
+				line-height: 1.142857;
+				font-weight: 600;
+				color: #565b61;
+				
+				&:hover {
+					color: $orange;
+				}
+			}
+		}
+	}
+}
+
+.footer-menu {
+	font-size: 14px;
+	line-height: 1.1428571;
+
+	@include media('>=tablet') {
+		overflow: hidden;
+	}
+
+	ul {
+		@extend %listreset;
+
+		@include media('>=tablet') {
+			li {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.menu {
+		@include media('>=tablet') {
+		    margin: 0 -6px;
+		    float: left;
+		}
+
+		@include media('>=desktop') {
+		    margin: 0 -22px;
+		}
+
+		li {
+			margin-bottom: 5px;
+
+			@include media('>=tablet') {
+		    	padding: 0 6px;
+		    	margin-bottom: 0;
+		    }
+
+		    @include media('>=desktop') {
+			    padding: 0 22px;
+			}
+
+			a {
+				color: #565b61;
+				font-weight: 400;
+
+				&:hover {
+					color: $orange;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 18px;
+
+				@include media('>=tablet') {
+			    	margin-bottom: 0;
+			    }
+			}
+		}
+	}
+
+	span {
+		color: #565b61;
+
+		@include media('>=tablet') {
+			float: right;
+		}
+
+		a {
+			color: #565b61;
+
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
