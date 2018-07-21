@@ -1,0 +1,8 @@
+@import '../base/mixins';
+
+@include font-face(futurafuturisc, futurafuturislightc_0-webfont, 300, normal);
+@include font-face(futurafuturisc, futurafuturisc_0-webfont, 400, normal);
+@include font-face(futurafuturisc, futurafuturisc-italic_0-webfont, 400, italic);
+@include font-face(futurafuturisc, futurafuturisc-bold_0-webfont, 700, normal);
+@include font-face(futurafuturisc, futurafuturisc-bolditalic_0-webfont, 700, italic);
+@include font-face(futurafuturisc, futurafuturisblackc-webfont, 900, normal);

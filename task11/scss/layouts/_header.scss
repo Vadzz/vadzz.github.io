@@ -1,0 +1,341 @@
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+	padding: 20px 0 22px;
+
+	@include media('>=widescreen') {
+		padding: 30px 0;
+	}
+
+	&.header-post {
+		.nav-drop {
+			.tel {
+				color: $black;
+
+				&:hover {
+					color: $orange;
+				}
+			}
+
+			.nav-list {
+				a {
+					color: $light-gray;
+
+					&:hover {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+
+	&.fixed {
+		@include animate(background-color);
+
+		background-color: $white;
+
+		.logo {
+			a {
+				&.visible-logo {
+					display: none;
+				}
+
+				&.hidden-logo {
+					display: block;
+				}
+			}
+		}
+
+		.nav-drop {
+			.nav-list {
+				li {
+					&.active a {
+					color: $orange;
+					}
+				}
+
+				a {
+					@include media('>=widescreen') {
+						color: $black;
+					}
+
+					&:hover {
+						color: $orange;
+					}
+				}
+			}
+
+			.tel {
+				color: #646262;
+
+				@include media('>=widescreen') {
+					color: $black;
+				}
+					
+				&:hover {
+					color: $orange;
+				}
+			}
+		}
+
+		.nav-opener {
+			&:before,
+			&:after,
+			span {
+				background: $orange;
+			}
+		}
+	}
+}
+
+.resize-active {
+	.nav-drop {
+		transition: none !important;
+	}
+}
+
+.header-holder {
+	@include media('>=widescreen') {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.logo {
+	width: 165px;
+	display: block;
+	position: relative;
+	z-index: 9999;
+
+	a {
+		&.visible-logo {
+			display: block;
+		}
+
+		&.hidden-logo {
+			display: none;
+		}
+	}
+}
+
+.nav {
+    @include media('>=widescreen') {
+    	max-width: 745px;
+    	width: 100%;
+    }
+
+    @include media('>=widescreen') {
+    	max-width: 867px;
+    }
+}
+
+.nav-drop {
+	.nav-active & {
+		opacity: 1;
+		visibility: visible;
+	}
+
+    background-color: #020c18;
+    padding: 80px 40px 20px;
+    text-align: center;
+
+    @include media('>=tablet') {
+    	padding: 80px 50px 20px;
+    }
+
+    @include media('>=widescreen') {
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	flex-wrap: wrap;
+    	background: transparent;
+    	padding: 0;
+    }
+
+	@include media('<widescreen') {
+		@include animate(opacity visibility);
+
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 999;
+	}
+
+	.nav-list {
+		@extend %listreset;
+
+		margin-bottom: 72px;
+
+		@include media('>=widescreen') {
+			max-width: 800px;
+			margin: 0 -24px;
+		}
+
+		li {
+			text-align: left;
+			display: block;
+    		margin-bottom: 15px;
+
+    		@include media('>=widescreen') {
+    			display: inline-block;
+				vertical-align: middle;
+				margin-bottom: 0;
+				padding: 0 24px;
+    		}
+
+			&.active a {
+				color: $orange;
+			}
+		}
+
+		a {
+			@include animate(color);
+			color: $white;
+			letter-spacing: 0.8px;
+			display: block;
+			font-size: 24px;
+			font-weight: 900;
+			line-height: 1.142857;
+
+			@include media('>=tablet') {
+				font-size: 36px;
+			}
+
+			@include media('>=widescreen') {
+				font-size: 12px;
+			}
+
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.tel {
+	font-size: 16px;
+	font-weight: 300;
+	color: #646262;
+	margin: 0 0 15px;
+
+	@include media('>=tablet') {
+		font-size: 18px;
+	}
+
+	@include media('>=widescreen') {
+		font-size: 16px;
+		font-weight: 900;
+		margin: 0;
+		color: $white;
+	}
+
+	&:hover {
+		color: $orange;
+	}
+}
+
+.row-hidden {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	@include media('>=widescreen') {
+		display: block;
+	}
+
+	.hidden-item {
+		font-size: 16px;
+		color: #646262;
+		margin: 0 0 15px;
+
+		@include media('>=tablet') {
+			font-size: 18px;
+		}
+
+		@include media('>=widescreen') {
+			display: none;
+		}
+	}
+
+	.social-icons {
+		@extend %listreset;
+
+		margin: 0 -12px;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 12px;
+		}
+	}
+}
+
+.nav-opener {
+	display: none;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 10px;
+	top: 16px;
+	z-index: 9999;
+
+	@include media ('<widescreen') {
+		display: block;
+	}
+
+	&:before,
+	&:after,
+	span {
+		background: $white;
+		border-radius: 4px;
+		position: absolute;
+		top: 16px;
+		left: 15%;
+		right: 15%;
+		height: 2px;
+		margin-top: -2px;
+		transition: all .2s linear;
+	}
+
+	span {
+		right: 4px;
+		left: 30%;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		top: 10px;
+	}
+
+	&:after {
+		top: 22px;
+		right: 4px;
+	}
+
+	.nav-active & {
+
+		span {
+			opacity: 0;
+		}
+
+		&:before,
+		&:after {
+			transform: rotate(45deg);
+			top: 50%;
+			left: 15%;
+			right: 15%;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
